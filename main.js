@@ -6,7 +6,7 @@ const buttonEl = document.getElementById("button")
 function calculatePrice() {
     
 let Km=Number(kmEl.value) ;
-console.log(numKm);
+console.log(Km);
 
 let age=Number(ageEl.value) ;
 console.log(age);
