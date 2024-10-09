@@ -6,15 +6,15 @@ const buttonEl = document.getElementById("button")
 const formEl = document.querySelector("form")
 /* console.log(formEl); */
 
-const cardEl = document.querySelector("card-body")
-const ticketEl = document.getElementById("ticket")
+const cardEl = document.querySelector(".card-body")
+
 function calculatePrice() {
     
 let Km=Number(kmEl.value) ;
-console.log(Km);
+
 
 let age=Number(ageEl.value) ;
-console.log(age);
+
 
 
 //prezzo per km
@@ -33,23 +33,24 @@ if (age < 18){
 else if (age >= 65){
    tot = tot - (tot*0.40);
 } 
-console.log(tot.toFixed(2)); 
-return tot;
+
+return tot.toFixed(2);
       
 }   
 
-buttonEl.addEventListener("click", calculatePrice)
+buttonEl.addEventListener("click", calculatePrice);
+
 formEl.addEventListener("submit", (event)=>{
     event.preventDefault();
 
-    console.log(nameEl.value);
-    console.log(kmEl.value);
-    console.log(ageEl.value);
+    console.log(nameEl);
+    console.log(kmEl);
+    console.log(ageEl);
     
 
-   const ticketEl =` <div> ${nameEl} </div>
-                    <div> ${kmEl} </div>
-                    <div> ${ageEl} </div>
+   const ticketEl =` <div> ${nameEl.value} </div>
+                    <div> ${kmEl.value} </div>
+                    <div> ${ageEl.value} </div>
                    
                     `
 
