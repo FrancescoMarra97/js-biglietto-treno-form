@@ -3,6 +3,7 @@ const kmEl = document.getElementById("km");
 const ageEl = document.getElementById("age")
 const buttonEl = document.getElementById("button")
 
+const form = document.querySelector("form")
 function calculatePrice() {
     
 let Km=Number(kmEl.value) ;
@@ -33,3 +34,6 @@ return tot;
 }   
 
 buttonEl.addEventListener("click", calculatePrice)
+form.addEventListener("submit", (event)=>{
+    event.preventDefault();
+})
