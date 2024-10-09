@@ -1,9 +1,14 @@
+/* const nameEl = document.getElementById("name"); */
+const kmEl = document.getElementById("km");
+const ageEl = document.getElementById("age")
+const buttonEl = document.getElementById("button")
+
 function calculatePrice() {
     
-let numKm = Number(prompt("Inserire il numero di km da percorrere"));
+let Km=Number(kmEl.value) ;
 console.log(numKm);
 
-let age = Number(prompt("Inserisci la tua età"));
+let age=Number(ageEl.value) ;
 console.log(age);
 
 
@@ -12,7 +17,7 @@ let Price_km=0.21;
 
 //prezzo totale senza sconti
 
-let tot = Price_km * numKm;
+let tot = Price_km * Km;
 
 //se minorenne -20%
 if (age < 18){
@@ -22,6 +27,9 @@ if (age < 18){
 else if (age >= 65){
    tot = tot - (tot*0.40);
 } 
-    
-console.log(tot.toFixed(2));   
+console.log(tot.toFixed(2)); 
+return tot;
+      
 }   
+
+buttonEl.addEventListener("click", calculatePrice)
