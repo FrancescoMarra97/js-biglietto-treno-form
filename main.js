@@ -1,3 +1,5 @@
+function calculatePrice() {
+    
 let numKm = Number(prompt("Inserire il numero di km da percorrere"));
 console.log(numKm);
 
@@ -21,4 +23,5 @@ else if (age >= 65){
    tot = tot - (tot*0.40);
 } 
     
-console.log(tot.toFixed(2));       
+console.log(tot.toFixed(2));   
+}   
