@@ -1,9 +1,12 @@
-/* const nameEl = document.getElementById("name"); */
+const nameEl = document.getElementById("name"); 
 const kmEl = document.getElementById("km");
 const ageEl = document.getElementById("age")
 const buttonEl = document.getElementById("button")
 
-const form = document.querySelector("form")
+const formEl = document.querySelector("form")
+/* console.log(formEl); */
+
+const cardEl = document.querySelector("card-body")
 function calculatePrice() {
     
 let Km=Number(kmEl.value) ;
@@ -20,6 +23,7 @@ let Price_km=0.21;
 
 let tot = Price_km * Km;
 
+
 //se minorenne -20%
 if (age < 18){
    tot = tot - (tot*0.20);
@@ -34,6 +38,19 @@ return tot;
 }   
 
 buttonEl.addEventListener("click", calculatePrice)
-form.addEventListener("submit", (event)=>{
+formEl.addEventListener("submit", (event)=>{
     event.preventDefault();
+
+    console.log(nameEl.value);
+    console.log(kmEl.value);
+    console.log(ageEl.value);
+    
+
+    const ticketEl=` <div> nome e cognome</div>
+                    <div>km da percorrere</div>
+                    <div>la tua età</div>
+                    <div>il totale del biglietto</div>
+                    `
+    
+
 })
