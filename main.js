@@ -7,6 +7,7 @@ const formEl = document.querySelector("form")
 /* console.log(formEl); */
 
 const cardEl = document.querySelector("card-body")
+const ticketEl = document.getElementById("ticket")
 function calculatePrice() {
     
 let Km=Number(kmEl.value) ;
@@ -46,11 +47,11 @@ formEl.addEventListener("submit", (event)=>{
     console.log(ageEl.value);
     
 
-    const ticketEl=` <div> nome e cognome</div>
-                    <div>km da percorrere</div>
-                    <div>la tua età</div>
-                    <div>il totale del biglietto</div>
+   const ticketEl =` <div> ${nameEl} </div>
+                    <div> ${kmEl} </div>
+                    <div> ${ageEl} </div>
+                   
                     `
-    
 
+    cardEl.insertAdjacentHTML("beforeend", ticketEl)                
 })
